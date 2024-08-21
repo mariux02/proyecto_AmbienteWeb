@@ -16,7 +16,7 @@ include("./config/db.php");
         <div class="logo">SC MOTORS</div>
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
+                <li><a href="index.php">Inicio</a></li>
                 <li><a href="#">Buscar Autos</a></li>
                 <li><a href="#">Explorar</a></li>
                 <li><a href="#">Comparar</a></li>

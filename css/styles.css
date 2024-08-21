@@ -93,15 +93,6 @@ footer {
     padding: 1rem 0;
 }
 
-#sectionForm {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-}
-
 h2 {
     text-align: center;
     color: #333;
@@ -116,6 +107,9 @@ form label {
 }
 
 form input[type="email"],
+form input[type="text"],
+form input[type="number"],
+form input[type="file"],
 form input[type="password"] {
     width: 100%;
     padding: 10px;
@@ -128,10 +122,14 @@ form input[type="password"] {
 }
 
 form input[type="email"]:focus,
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form input[type="file"]:focus,
 form input[type="password"]:focus {
     border-color: #ff9900;
 }
 
+a[class="button"],
 form button[type="submit"] {
     width: 100%;
     padding: 10px;
@@ -143,10 +141,13 @@ form button[type="submit"] {
     font-size: 1rem;
     font-weight: bold;
     transition: background-color 0.3s;
+    text-decoration: none;
 }
 
+a[class="button"]:hover,
 form button[type="submit"]:hover {
     background-color: #cc7a00;
+    text-decoration: none;
 }
 
 #mainForm {
@@ -155,4 +156,42 @@ form button[type="submit"]:hover {
     align-items: center;
     height: calc(100vh - 100px);
     background-color: #f4f4f4;
+}
+
+#sectionForm {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+#mainForm2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+    background-color: #f4f4f4;
+}
+
+#sectionForm2 {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+#formVehiculos {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#formVehiculos .form-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
