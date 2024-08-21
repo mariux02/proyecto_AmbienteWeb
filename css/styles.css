@@ -110,7 +110,8 @@ form input[type="email"],
 form input[type="text"],
 form input[type="number"],
 form input[type="file"],
-form input[type="password"] {
+form input[type="password"],
+textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 1rem;
@@ -125,7 +126,8 @@ form input[type="email"]:focus,
 form input[type="text"]:focus,
 form input[type="number"]:focus,
 form input[type="file"]:focus,
-form input[type="password"]:focus {
+form input[type="password"]:focus,
+textarea:focus{
     border-color: #ff9900;
 }
 
@@ -175,6 +177,7 @@ form button[type="submit"]:hover {
     background-color: #f4f4f4;
 }
 
+#vehiculo-detalle,
 #sectionForm2 {
     background-color: white;
     padding: 2rem;
@@ -194,4 +197,38 @@ form button[type="submit"]:hover {
     flex: 1;
     display: flex;
     flex-direction: column;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table thead {
+    background-color: #333;
+    color: white;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #2b302f18;
+}
+
+table th {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.1em;
 }

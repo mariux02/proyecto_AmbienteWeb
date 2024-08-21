@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SC MOTORS - Venta de Autos</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/script.js"></script>
 </head>
 <body>
     <header>
@@ -30,8 +32,27 @@
         </nav>
     </header>
     <main id="mainForm">
+        <br>
         <section>
+            <br>
+            <h2>Inventario de Vehículos</h2>
             <a class="button" id="botonPrimario" href="nuevoVehiculo.php">Agregar</a>
+            <table id="inventario">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Año</th>
+                        <th>Precio</th>
+                        <th>Vendedor</th>
+                        <th>Detalles</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
         </section>
     </main>
     <footer>
@@ -39,4 +60,3 @@
     </footer>
 </body>
 </html>
-
