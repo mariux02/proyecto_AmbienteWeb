@@ -5,14 +5,25 @@ include("./config/db.php");
 if (isset($_GET['id'])) {
     $idVehiculo = $_GET['id'];
 
-    $sql = "SELECT ID_VEHICULO, MARCA, MODELO, AÑO, PRECIO, DESCRIPCION, ESTADO, VENDEDOR, TELEFONO_VENDEDOR 
-            FROM VEHICULOS 
-            WHERE ID_VEHICULO = $idVehiculo";
+    // Consulta para obtener los detalles del vehículo
+    $sqlVehiculo = "SELECT ID_VEHICULO, MARCA, MODELO, AÑO, PRECIO, DESCRIPCION, ESTADO, VENDEDOR, TELEFONO_VENDEDOR 
+                    FROM VEHICULOS 
+                    WHERE ID_VEHICULO = $idVehiculo";
+    $resultVehiculo = $conn->query($sqlVehiculo);
 
-    $result = $conn->query($sql);
+    // Consulta para obtener las imágenes del vehículo
+    $sqlImagenes = "SELECT ruta_imagen FROM imagenes WHERE id_vehiculo = $idVehiculo";
+    $resultImagenes = $conn->query($sqlImagenes);
 
-    if ($result->num_rows > 0) {
-        $vehiculo = $result->fetch_assoc();
+    if ($resultVehiculo->num_rows > 0) {
+        $vehiculo = $resultVehiculo->fetch_assoc();
+        $vehiculo['imagenes'] = [];
+
+        if ($resultImagenes->num_rows > 0) {
+            while ($row = $resultImagenes->fetch_assoc()) {
+                $vehiculo['imagenes'][] = $row['ruta_imagen'];
+            }
+        }
 
         header('Content-Type: application/json');
         echo json_encode($vehiculo);

@@ -31,47 +31,55 @@
             </ul>
         </nav>
     </header>
-    <main id="mainForm2">
-        <section id="vehiculo-detalle">
-            <h2>Modificar Detalles del Vehículo</h2>
-            <form id="formVehiculos" method="post" action="procesar_modificar_vehiculo.php" enctype="multipart/form-data">
-                
-                <input type="hidden" name="id_vehiculo" id="id_vehiculo">
+    <main id="mainForm1">
+        <main id="mainForm2">
+            <section id="vehiculo-detalle">
+                <h2>Modificar Detalles del Vehículo</h2>
+                <form id="formVehiculos" method="post" action="procesar_modificar_vehiculo.php" enctype="multipart/form-data">
+                    
+                    <input type="hidden" name="id_vehiculo" id="id_vehiculo">
 
-                <div class="form-column">
-                    <label>Marca:</label>
-                    <input type="text" name="marca" id="marca" required>
+                    <div class="form-column">
+                        <label>Marca:</label>
+                        <input type="text" name="marca" id="marca" required>
 
-                    <label>Modelo:</label>
-                    <input type="text" name="modelo" id="modelo" required>
+                        <label>Modelo:</label>
+                        <input type="text" name="modelo" id="modelo" required>
 
-                    <label>Año:</label>
-                    <input type="number" name="year" id="year" required>
+                        <label>Año:</label>
+                        <input type="number" name="year" id="year" required>
 
-                    <label>Precio:</label>
-                    <input type="number" name="precio" id="precio" required>
+                        <label>Precio:</label>
+                        <input type="number" name="precio" id="precio" required>
 
-                    <label>Descripción:</label>
-                    <textarea name="descripcion" id="descripcion" rows="4" cols="50" required></textarea>
-                </div>
+                        <label>Descripción:</label>
+                        <textarea name="descripcion" id="descripcion" rows="4" cols="50" required></textarea>
+                    </div>
 
-                <div class="form-column">
-                    <label>Estado:</label>
-                    <input type="text" name="estado" id="estado" required>
+                    <div class="form-column">
+                        <label>Estado:</label>
+                        <input type="text" name="estado" id="estado" required>
 
-                    <label>Vendedor:</label>
-                    <input type="text" name="vendedor" id="vendedor" required>
+                        <label>Vendedor:</label>
+                        <input type="text" name="vendedor" id="vendedor" required>
 
-                    <label>Número Telefónico del Vendedor:</label>
-                    <input type="text" name="tel" id="tel" required>
+                        <label>Número Telefónico del Vendedor:</label>
+                        <input type="text" name="tel" id="tel" required>
 
-                    <button type="submit" id="actualizaVehiculo">Modificar</button>
+                        <button type="submit" id="actualizaVehiculo">Modificar</button>
+                        
+                    </div>
+                </form>
+            </section>
+        </main>
+        <section >
+                <h2>Imágenes del Vehículo</h2>
+                <section id="imagenes-vehiculo">
+                <!-- Aquí se mostrarán las imágenes -->
+                </section>
+            </section>
+    </main> 
 
-                </div>
-            </form>
-        </section>
-        <!--AQUI IRIA EL SECTION DE LAS IMAGENES-->
-    </main>
     <footer>
         <p>&copy; 2024 SC MOTORS. Todos los derechos reservados.</p>
     </footer>
