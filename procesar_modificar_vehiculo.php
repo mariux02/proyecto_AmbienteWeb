@@ -1,5 +1,6 @@
 <?php
 include("./config/db.php");
+session_start(); 
 
 $marca =  $_POST['marca'];
 $modelo =  $_POST['modelo'];

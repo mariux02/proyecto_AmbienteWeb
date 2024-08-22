@@ -1,5 +1,6 @@
 <?php
 include("./config/db.php");
+session_start(); 
 
 $directorio = "uploads/";//aquí se guardan las imágenes de los vehiculos
 $marca =  $_POST['marca'];

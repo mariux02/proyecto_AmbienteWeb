@@ -114,7 +114,8 @@ form input[type="text"],
 form input[type="number"],
 form input[type="file"],
 form input[type="password"],
-textarea {
+textarea,
+select {
     width: 100%;
     padding: 10px;
     margin-bottom: 1rem;
@@ -130,7 +131,8 @@ form input[type="text"]:focus,
 form input[type="number"]:focus,
 form input[type="file"]:focus,
 form input[type="password"]:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
     border-color: #ff9900;
 }
 
@@ -224,7 +226,8 @@ table th {
     letter-spacing: 0.1em;
 }
 
-#btnEliminar {
+#btnEliminar,
+#btnEliminarUsuario {
     width: 100%;
     padding: 10px;
     background-color: #ff3c00b9;
@@ -238,7 +241,8 @@ table th {
     text-decoration: none;
 }
 
-#btnEliminar:hover {
+#btnEliminar:hover,
+#btnEliminarUsuario:hover {
     background-color: #ff3c00;
     text-decoration: none;
 }
@@ -322,4 +326,20 @@ table th {
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
     }
+}
+
+.enlace-centro {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.enlace-centro a {
+    color: #cc7a00; 
+    font-size: 16px;
+    font-weight: bold; 
+    display: inline-block; 
+}
+
+.enlace-centro a:hover {
+    color: #cc7a0083;
 }

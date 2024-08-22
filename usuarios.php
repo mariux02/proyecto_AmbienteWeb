@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
     session_start(); 
 ?>
 <!DOCTYPE html>
@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SC MOTORS - Venta de Autos</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/script.js"></script>
 </head>
 <body>
     <header>
@@ -36,32 +38,30 @@
             </ul>
         </nav>
     </header>
-    <section class="hero">
-        <h1>Encuentra el Auto de tus Sueños</h1>
-        <p>Busca, explora, compara y compra vehículos nuevos y usados de manera intuitiva y segura.</p>
-        <a href="#" class="cta-button">Comienza Ahora</a>
-    </section>
-    <section class="features">
-        <div class="feature">
-            <h2>Buscar Autos</h2>
-            <p>Encuentra el auto perfecto utilizando nuestros filtros avanzados de búsqueda.</p>
-        </div>
-        <div class="feature">
-            <h2>Explorar</h2>
-            <p>Explora una amplia variedad de vehículos disponibles en nuestro inventario.</p>
-        </div>
-        <div class="feature">
-            <h2>Comparar</h2>
-            <p>Compara diferentes modelos y elige el que mejor se adapte a tus necesidades.</p>
-        </div>
-        <div class="feature">
-            <h2>Comprar</h2>
-            <p>Compra tu auto de manera segura con nuestra plataforma de pago confiable.</p>
-        </div>
-    </section>
+    <main id="mainForm">
+        <br>
+        <section>
+            <br>
+            <h2>Listado de Usuarios</h2>
+            <a class="button" id="botonPrimario" href="nuevoUsuario.php">Agregar</a>
+            <table id="usuarios">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Rol</th>
+                        <th> </th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2024 SC MOTORS. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
-

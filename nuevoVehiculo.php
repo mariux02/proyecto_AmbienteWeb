@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <header>
+<header>
         <div class="logo">SC MOTORS</div>
         <nav>
             <ul>
@@ -20,12 +20,19 @@
                 <li><a href="#">Comparar</a></li>
                 <li><a href="#">Comprar</a></li>
                 <li><a href="#">Contacto</a></li>
-                <?php if(isset($_SESSION["CORREO"]) && $_SESSION["CORREO"]!="") { ?>
-                    <li><a href="inventario.php">Inventario</a></li>
-                    <li><a href="logout.php">Salir</a></li>
-                <?php } else {?>
-                    <li><a href="login.php">Iniciar Sesion</a></li>
-                <?php } ?>
+                <!--Menu de usuarios logueados -->
+                <?php 
+                    if (isset($_SESSION["CORREO"]) && $_SESSION["CORREO"] != "") {
+                        //Menu de administradores
+                        if (isset($_SESSION["ROL"]) && $_SESSION["ROL"] == "Administrador") {
+                            echo '<li><a href="inventario.php">Inventario</a></li>';
+                            echo '<li><a href="Usuarios.php">Usuarios</a></li>';
+                        }
+                        echo '<li><a href="logout.php">Salir</a></li>';
+                    } else {
+                        echo '<li><a href="login.php">Iniciar Sesion</a></li>';
+                    }
+                ?>
             </ul>
         </nav>
     </header>

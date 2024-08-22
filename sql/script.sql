@@ -2,7 +2,8 @@ CREATE TABLE USUARIOS (
     ID_USUARIO INT AUTO_INCREMENT PRIMARY KEY,
     NOMBRE VARCHAR(100),
     CORREO VARCHAR(100),
-    CONTRASENA VARCHAR(255)
+    CONTRASENA VARCHAR(255),
+    ROL VARCHAR(25)
 );
 
 CREATE TABLE VEHICULOS (
@@ -35,12 +36,12 @@ CREATE TABLE imagenes (
 );
 
 --CONTREASEÑAS 123456
-INSERT INTO USUARIOS (NOMBRE, CORREO, CONTRASENA) 
-VALUES ('Juan Pérez', 'juan.perez@example.com', '$2y$10$d6POOPxvzXHrTHBT./UyAe.bZFH90l1ZWDpfZZ7i7mCZEY5DejzNq');
-INSERT INTO USUARIOS (NOMBRE, CORREO, CONTRASENA) 
-VALUES ('María López', 'maria.lopez@example.com', '$2y$10$d6POOPxvzXHrTHBT./UyAe.bZFH90l1ZWDpfZZ7i7mCZEY5DejzNq');
-INSERT INTO USUARIOS (NOMBRE, CORREO, CONTRASENA) 
-VALUES ('Carlos García', 'carlos.garcia@example.com', '$2y$10$d6POOPxvzXHrTHBT./UyAe.bZFH90l1ZWDpfZZ7i7mCZEY5DejzNq');
+INSERT INTO USUARIOS (NOMBRE, CORREO, CONTRASENA, ROL) 
+VALUES ('Juan Pérez', 'juan.perez@example.com', '$2y$10$d6POOPxvzXHrTHBT./UyAe.bZFH90l1ZWDpfZZ7i7mCZEY5DejzNq', 'Administrador');
+INSERT INTO USUARIOS (NOMBRE, CORREO, CONTRASENA, ROL) 
+VALUES ('María López', 'maria.lopez@example.com', '$2y$10$d6POOPxvzXHrTHBT./UyAe.bZFH90l1ZWDpfZZ7i7mCZEY5DejzNq', 'Administrador');
+INSERT INTO USUARIOS (NOMBRE, CORREO, CONTRASENA, ROL) 
+VALUES ('Carlos García', 'carlos.garcia@example.com', '$2y$10$d6POOPxvzXHrTHBT./UyAe.bZFH90l1ZWDpfZZ7i7mCZEY5DejzNq', 'Cliente');
 
 INSERT INTO VEHICULOS (ID_VEHICULO, MARCA, MODELO, AÑO, PRECIO, DESCRIPCION, ESTADO, VENDEDOR, TELEFONO_VENDEDOR)
 VALUES (1, 'Toyota', 'Hiace', 2020, 40800, 'Combustible: diesel. 3 Puertas. Kilometraje: 190.000 km. Transmisión: Manual', 'Casi nuevo', 'Jean Carlo Flores Solís', '(+506) 6015-7555');

@@ -6,6 +6,32 @@
     <title>Ver Imágenes del Vehículo</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
+<header>
+        <div class="logo">SC MOTORS</div>
+        <nav>
+            <ul>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="#">Buscar Autos</a></li>
+                <li><a href="#">Explorar</a></li>
+                <li><a href="#">Comparar</a></li>
+                <li><a href="#">Comprar</a></li>
+                <li><a href="#">Contacto</a></li>
+                <!--Menu de usuarios logueados -->
+                <?php 
+                    if (isset($_SESSION["CORREO"]) && $_SESSION["CORREO"] != "") {
+                        //Menu de administradores
+                        if (isset($_SESSION["ROL"]) && $_SESSION["ROL"] == "Administrador") {
+                            echo '<li><a href="inventario.php">Inventario</a></li>';
+                            echo '<li><a href="Usuarios.php">Usuarios</a></li>';
+                        }
+                        echo '<li><a href="logout.php">Salir</a></li>';
+                    } else {
+                        echo '<li><a href="login.php">Iniciar Sesion</a></li>';
+                    }
+                ?>
+            </ul>
+        </nav>
+    </header>
 <body>
     <header>
         <h2>Buscar Imágenes del Vehículo</h2>
