@@ -26,7 +26,7 @@
                     <li><a href="inventario.php">Inventario</a></li>
                     <li><a href="logout.php">Salir</a></li>
                 <?php } else {?>
-                    <li><a href="login.php">Iniciar Sesion</a></li>
+                    <li><a href="login.php">Iniciar Sesión</a></li>
                 <?php } ?>
             </ul>
         </nav>
@@ -47,10 +47,10 @@
                         <th>Precio</th>
                         <th>Vendedor</th>
                         <th>Detalles</th>
+                        <th> </th>
                     </tr>
                 </thead>
                 <tbody>
-
                 </tbody>
             </table>
         </section>

@@ -18,6 +18,7 @@ $(document).ready(function() {
                     rows += '<td> $' + i.PRECIO + '</td>';
                     rows += '<td>' + i.VENDEDOR + '</td>';
                     rows += '<td><a class="button" href="detalleVehiculo.php?id=' + i.ID_VEHICULO + '">Detalles</a></td>';
+                    rows += '<td><a id="btnEliminar" class="button" onclick="eliminarVehiculo(' + i.ID_VEHICULO + ')">Eliminar</button></td>';
                     rows += '</tr>';
                 });
                 $('#inventario tbody').html(rows);
@@ -28,12 +29,13 @@ $(document).ready(function() {
         });
     }
 
-    //Detalles del vehículo
+    
+
+    // Cargar detalles del vehículo
     var urlParams = new URLSearchParams(window.location.search);
     var vehiculoId = urlParams.get('id');
 
     if (vehiculoId) {
-        
         $.ajax({
             url: 'procesar_detalleVehiculo.php',
             type: 'GET',
@@ -59,7 +61,49 @@ $(document).ready(function() {
                 alert('Error al cargar los detalles del vehículo.');
             }
         });
-    } else {
-        alert('ID de vehículo no especificado.');
     }
 });
+
+function eliminarVehiculo(vehiculoID) {
+    $.ajax({
+        url: 'procesar_eliminar_vehiculo.php',
+        type: 'POST',
+        data: { 
+            id: vehiculoID
+        },
+        success: function(response) {
+            alert('Eliminación exitosa.');
+            cargarInventario();
+        },
+        error: function(xhr, status, error) {
+            console.error("Error: " + error);
+        }
+    });
+}
+
+function cargarInventario() {
+    $.ajax({
+        url: 'procesar_inventario.php',
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+            var rows = '';
+            data.forEach(function(i) {
+                rows += '<tr>';
+                rows += '<td>' + i.ID_VEHICULO + '</td>';
+                rows += '<td>' + i.MARCA + '</td>';
+                rows += '<td>' + i.MODELO + '</td>';
+                rows += '<td>' + i.AÑO + '</td>';
+                rows += '<td> $' + i.PRECIO + '</td>';
+                rows += '<td>' + i.VENDEDOR + '</td>';
+                rows += '<td><a class="button" href="detalleVehiculo.php?id=' + i.ID_VEHICULO + '">Detalles</a></td>';
+                rows += '<td><a id="btnEliminar" class="button" onclick="eliminarVehiculo(' + i.ID_VEHICULO + ')">Eliminar</button></td>';
+                rows += '</tr>';
+            });
+            $('#inventario tbody').html(rows);
+        },
+        error: function(xhr, status, error) {
+            console.error("Error al cargar inventario: " + error);
+        }
+    });
+}

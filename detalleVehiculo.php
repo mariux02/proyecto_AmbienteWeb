@@ -34,7 +34,8 @@
     <main id="mainForm2">
         <section id="vehiculo-detalle">
             <h2>Modificar Detalles del Vehículo</h2>
-            <form id="formVehiculos" method="post" action="procesar_actualiza_vehiculos.php" enctype="multipart/form-data">
+            <form id="formVehiculos" method="post" action="procesar_modificar_vehiculo.php" enctype="multipart/form-data">
+                
                 <input type="hidden" name="id_vehiculo" id="id_vehiculo">
 
                 <div class="form-column">
@@ -65,9 +66,11 @@
                     <input type="text" name="tel" id="tel" required>
 
                     <button type="submit" id="actualizaVehiculo">Modificar</button>
+
                 </div>
             </form>
         </section>
+        <!--AQUI IRIA EL SECTION DE LAS IMAGENES-->
     </main>
     <footer>
         <p>&copy; 2024 SC MOTORS. Todos los derechos reservados.</p>

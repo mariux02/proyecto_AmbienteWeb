@@ -45,5 +45,3 @@ if($marca == "" || $modelo == "" || $year == "" || $precio == "" || $descripcion
         echo "02";
     }
 }
-
-//

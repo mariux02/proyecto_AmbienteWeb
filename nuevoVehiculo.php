@@ -61,7 +61,7 @@
                     <input type="text" name="tel" id="tel" required>
 
                     <label>Selecciona imágenes:</label>
-                    <input type="file" name="imagenes[]" id="imagenes" multiple>
+                    <input type="file" name="imagenes[]" id="imagenes" multiple required>
                     <br>
                     <button type="submit" id="nuevoVehiculo">Ingresar</button>
                 </div>
