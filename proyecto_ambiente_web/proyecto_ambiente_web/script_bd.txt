@@ -1,0 +1,143 @@
+create database autos2;
+Use autos2;
+
+
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `Identificacion` int(11) NOT NULL,
+  `Nombre` varchar(100) DEFAULT NULL,
+  `Email` varchar(100) DEFAULT NULL,
+  `Password` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`Identificacion`),
+  UNIQUE KEY `Email` (`Email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+select * from usuario;	
+select * from VEHICULOS;
+
+Drop table VEHICULOS;
+CREATE TABLE IF NOT EXISTS VEHICULOS (
+    id_vehiculo INT AUTO_INCREMENT PRIMARY KEY,
+    marca VARCHAR(100),
+    modelo VARCHAR(100),
+    año INT,
+    precio DECIMAL(10, 2),
+    descripcion VARCHAR(300),
+    estado VARCHAR(50),
+    vendedor VARCHAR(100),
+    telefono_vendedor VARCHAR(50),
+    imagen VARCHAR(255) DEFAULT NULL -- Ruta o nombre del archivo de la imagen
+);
+
+CREATE TABLE COMPRAS (
+    ID_COMPRA INT AUTO_INCREMENT PRIMARY KEY,
+    ID_USUARIO INT,
+    FECHA_COMPRA DATE,
+    ID_VEHICULO INT,
+    TOTAL DECIMAL(10, 2),
+    FOREIGN KEY (ID_USUARIO) REFERENCES USUARIO(ID_USUARIO),
+    FOREIGN KEY (ID_VEHICULO) REFERENCES VEHICULOS(ID_VEHICULO)
+);
+
+
+-----------------------------------------------------------------------------------------------------------
+
+
+
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ActualizarUsuario`(IN `p_id_usuario` INT, IN `p_nombre` VARCHAR(100), IN `p_email` VARCHAR(100), IN `p_password` VARCHAR(100))
+BEGIN
+    IF p_password IS NOT NULL AND p_password != '' THEN
+        UPDATE usuario
+        SET Nombre = p_nombre,
+            Email = p_email,
+            Password = p_password
+        WHERE Identificacion = p_id_usuario;
+    ELSE
+        UPDATE usuario
+        SET Nombre = p_nombre,
+            Email = p_email
+        WHERE Identificacion = p_id_usuario;
+    END IF;
+END
+
+
+
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ActualizarVehiculo`(
+    IN p_id_vehiculo INT,
+    IN p_marca VARCHAR(100),
+    IN p_modelo VARCHAR(100),
+    IN p_año INT,
+    IN p_precio DECIMAL(10, 2),
+    IN p_descripcion VARCHAR(300),
+    IN p_estado VARCHAR(50),
+    IN p_vendedor VARCHAR(100),
+    IN p_telefono_vendedor VARCHAR(50),
+    IN p_imagen VARCHAR(255)
+)
+BEGIN
+    UPDATE VEHICULOS
+    SET MARCA = p_marca,
+        MODELO = p_modelo,
+        AÑO = p_año,
+        PRECIO = p_precio,
+        DESCRIPCION = p_descripcion,
+        ESTADO = p_estado,
+        VENDEDOR = p_vendedor,
+        TELEFONO_VENDEDOR = p_telefono_vendedor,
+        imagen = IFNULL(p_imagen, imagen)  -- Solo actualiza si p_imagen no es NULL
+    WHERE ID_VEHICULO = p_id_vehiculo;
+END
+
+
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `EliminarVehiculo`(IN p_id_vehiculo INT)
+BEGIN
+    DELETE FROM VEHICULOS
+    WHERE ID_VEHICULO = p_id_vehiculo;
+END
+
+
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `IniciarSesion`(IN `pEmail` VARCHAR(100), IN `pPassword` VARCHAR(100))
+BEGIN
+    SELECT Identificacion, Nombre, Email
+    FROM usuario
+    WHERE Email = pEmail AND Password = pPassword;
+END
+
+
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertarVehiculo`(
+    IN p_marca VARCHAR(100),
+    IN p_modelo VARCHAR(100),
+    IN p_año INT,
+    IN p_precio DECIMAL(10, 2),
+    IN p_descripcion VARCHAR(300),
+    IN p_estado VARCHAR(50),
+    IN p_vendedor VARCHAR(100),
+    IN p_telefono_vendedor VARCHAR(50),
+    IN p_imagen VARCHAR(255)
+)
+BEGIN
+    INSERT INTO VEHICULOS (MARCA, MODELO, AÑO, PRECIO, DESCRIPCION, ESTADO, VENDEDOR, TELEFONO_VENDEDOR, IMAGEN)
+    VALUES (p_marca, p_modelo, p_año, p_precio, p_descripcion, p_estado, p_vendedor, p_telefono_vendedor, p_imagen);
+END
+
+
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `RegistrarUsuario`(IN `pIdentificacion` INT, IN `pNombre` VARCHAR(100), IN `pEmail` VARCHAR(100), IN `pPassword` VARCHAR(100))
+BEGIN
+    INSERT INTO usuario (Identificacion, Nombre, Email, Password)
+    VALUES (pIdentificacion, pNombre, pEmail, pPassword);
+END
+
+
+
+
