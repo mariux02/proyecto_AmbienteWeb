@@ -76,7 +76,79 @@ VALUES('uploads/ToyotaHilux3-JeanCarlos.jpg', 3);
 INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
 VALUES('uploads/ToyotaHilux4-JeanCarlos.jpg', 3);
 
+INSERT INTO VEHICULOS (ID_VEHICULO, MARCA, MODELO, AÑO, PRECIO, DESCRIPCION, ESTADO, VENDEDOR, TELEFONO_VENDEDOR)
+VALUES (4, 'Hyundai', 'Tucson', 2016, 17890, 'Combustible: gasolina. 4 Puertas. Kilometraje: 115.678 km. Transmisión: automático', 'Casi nuevo', 'Jean Carlo Flores Solís', '(+506) 6015-7555');
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/HyundaiTucson1-JeanCarlos.jpg', 4);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/HyundaiTucson2-JeanCarlos.jpg', 4);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/HyundaiTucson3-JeanCarlos.jpg', 4);
 
+INSERT INTO VEHICULOS (ID_VEHICULO, MARCA, MODELO, AÑO, PRECIO, DESCRIPCION, ESTADO, VENDEDOR, TELEFONO_VENDEDOR)
+VALUES (5, 'Suzuki', 'New Viatara', 2020, 22490, 'Combustible: gasolina. 4 Puertas. Kilometraje: 45.490 km. Transmisión: automático', 'Casi nuevo', 'Jean Carlo Flores Solís', '(+506) 6015-7555');
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/SuzukiNewViatara1-JeanCarlos.jpg', 5);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/SuzukiNewViatara2-JeanCarlos.jpg', 5);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/SuzukiNewViatara3-JeanCarlos.jpg', 5);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/SuzukiNewViatara4-JeanCarlos.jpg', 5);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/SuzukiNewViatara5-JeanCarlos.jpg', 5);
 
+INSERT INTO VEHICULOS (ID_VEHICULO, MARCA, MODELO, AÑO, PRECIO, DESCRIPCION, ESTADO, VENDEDOR, TELEFONO_VENDEDOR)
+VALUES (6, 'Toyota', 'Rush', 2020, 28490, 'Combustible: gasolina. 4 Puertas. Kilometraje: 67432 km. Transmisión: automático', 'Casi nuevo', 'Jean Carlo Flores Solís', '(+506) 6015-7555');
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/ToyotaRush1-JeanCarlos.jpg', 6);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/ToyotaRush2-JeanCarlos.jpg', 6);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/ToyotaRush3-JeanCarlos.jpg', 6);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/ToyotaRush4-JeanCarlos.jpg', 6);
 
+INSERT INTO VEHICULOS (ID_VEHICULO, MARCA, MODELO, AÑO, PRECIO, DESCRIPCION, ESTADO, VENDEDOR, TELEFONO_VENDEDOR)
+VALUES (7, 'Suzuki', 'New Viatara', 2022, 24990, 'Combustible: gasolina. 4 Puertas. Kilometraje: 27885 km. Transmisión: automático', 'Casi nuevo', 'Jean Carlo Flores Solís', '(+506) 6015-7555');
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/SuzukiNewViataraAzul1-JeanCarlos.jpg', 7);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/SuzukiNewViataraAzul2-JeanCarlos.jpg', 7);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/SuzukiNewViataraAzul3-JeanCarlos.jpg', 7);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/SuzukiNewViataraAzul4-JeanCarlos.jpg', 7);
 
+INSERT INTO VEHICULOS (ID_VEHICULO, MARCA, MODELO, AÑO, PRECIO, DESCRIPCION, ESTADO, VENDEDOR, TELEFONO_VENDEDOR)
+VALUES (8, 'Isuzu', 'Dmax', 2017, 13800, 'Combustible: diesel. 4 Puertas. Kilometraje: 124.567 km. Transmisión: automático', 'Casi nuevo', 'Jean Carlo Flores Solís', '(+506) 6015-7555');
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/IsuzuDmax1-JeanCarlos.jpg', 8);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/IsuzuDmax2-JeanCarlos.jpg', 8);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/IsuzuDmax3-JeanCarlos.jpg', 8);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/IsuzuDmax4-JeanCarlos.jpg', 8);
+
+INSERT INTO VEHICULOS (ID_VEHICULO, MARCA, MODELO, AÑO, PRECIO, DESCRIPCION, ESTADO, VENDEDOR, TELEFONO_VENDEDOR)
+VALUES (9, 'Toyota', 'Prado', 2019, 52990, 'Combustible: diesel. 4 Puertas. Kilometraje: 77.320 km. Transmisión: automático', 'Casi nuevo', 'Jean Carlo Flores Solís', '(+506) 6015-7555');
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/ToyotaPrado1-JeanCarlos.jpg', 9);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/ToyotaPrado2-JeanCarlos.jpg', 9);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/ToyotaPrado3-JeanCarlos.jpg', 9);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/ToyotaPrado4-JeanCarlos.jpg', 9);
+
+INSERT INTO VEHICULOS (ID_VEHICULO, MARCA, MODELO, AÑO, PRECIO, DESCRIPCION, ESTADO, VENDEDOR, TELEFONO_VENDEDOR)
+VALUES (10, 'Isuzu', 'NLR', 2018, 13200, 'Combustible: diesel. 2 Puertas. Kilometraje: 100.587 km. Transmisión: manual', 'Casi nuevo', 'Jean Carlo Flores Solís', '(+506) 6015-7555');
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/IsuzuNLR1-JeanCarlos.jpg', 10);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/IsuzuNLR2-JeanCarlos.jpg', 10);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/IsuzuNLR3-JeanCarlos.jpg', 10);
+INSERT INTO IMAGENES (RUTA_IMAGEN, ID_VEHICULO)
+VALUES('uploads/IsuzuNLR4-JeanCarlos.jpg', 10);
